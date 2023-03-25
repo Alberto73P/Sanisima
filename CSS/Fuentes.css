@@ -1,0 +1,43 @@
+
+@font-face {
+    font-family: 'LetraBonita';
+    font-style: normal;
+    src:
+      local("LetraBonita"),    
+      url("../Fuentes/Bachelorette_PERSONAL_USE_ONLY.otf") format("opentype");
+  }
+@font-face {
+    font-family:'PieDePollo';
+    font-style: normal;
+    src: 
+        local("PieDePollo"),
+        url("../Fuentes/CHICKEN\ Pie.ttf") format("truetype"),
+        url("../Fuentes/CHICKEN\ Pie\ Height.ttf") format("truetype"),
+        url("../Fuentes/CHICKEN\ Pie.otf") format("opentype"),
+        url("../Fuentes/CHICKEN\ Pie\ Height.otf") format("opentype");
+}
+@font-face {
+    font-family:'Frijol';
+    font-style: normal;
+    src: 
+        local("Frijol"),
+        url("../Fuentes/CaviarDreams_Bold.ttf") format("truetype"),
+        url("../Fuentes/CaviarDreams_Bold.ttf") format("truetype"),
+        url("../Fuentes/CaviarDreams_BoldItalic.ttf") format("truetype"),
+        url("../Fuentes/CaviarDreams_Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family:'Pastelito';
+    font-style: normal;
+    src: 
+        local("Pastelito"),
+        url("../Fuentes/Cream\ Cake.otf") format("opentype");
+}
+@font-face {
+    font-family:'Handmade';
+    font-style: normal;
+    src: 
+        local("Handmade"),
+        url("../Fuentes/SimpleHandmade.ttf") format("truetype"),
+        url("../Fuentes/SimpleHandmade.otf") format("opentype");
+}
