@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Contactanos</title>
+        <link rel="stylesheet" href="../CSS/Estilos.css"/>
+        <link rel="stylesheet" href="../CSS/Fuentes.css"/>
+
+        <style>
+            .ContenedorMadre{
+                height: 100%;
+                display: grid;
+                grid-template-areas:'barra'
+                        'contenido'
+                        'footer';  
+                background-color: #FFFFFF;
+            }
+
+            #ContenidoPrincipal{
+                padding-left: 25px;
+                grid-area: contenido;
+            }
+
+            .mapa{
+                margin-left: 50px;
+                width: 300px;
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ContenedorMadre">
+            <div id="menu">
+                <div id="Marca">
+                    <img src="../img/Logo.png" width="80" height="80">
+                    <p>Sanisima</p> 
+                </div>
+                <div id="Paginas">
+                    <div class="navegador"><p>Inicio</p> </div>
+                    <div class="navegador"><p>Conocenos</p></div>
+                    <div class="navegador"><p>Productos</p></div>
+                    <!-- #region<div class="navegador izq"> Organigrama </div> -->
+                    <div class="navegador izq"><p>Contactanos</p></div>
+                </div>            
+            </div>
+            <div id="ContenidoPrincipal">
+                <h2>Contactanos</h2>
+                
+                <p>Numero de Telefono: XXX-XXX-XXXX</p>
+                <p>Ubicacion:</p>
+                
+                <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4859.895480762973!2d-98.77976990124658!3d20.07173183731833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1679947673630!5m2!1ses-419!2smx" 
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+                <form>
+                    <p>Envianos un mensaje!</p>
+
+                    <label>Correo:</label>
+                    <input type="email"/>
+                    <br>
+
+                    <label>Mensaje</label>
+                    <input type="text">
+                    <br>
+                    
+                    <input type="submit"/>
+                </form>
+            </div>
+            <div id="Footer">Derechos Reservados</div>
+        </div>
+    </body>
+</html>
