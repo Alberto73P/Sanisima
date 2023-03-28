@@ -101,23 +101,12 @@ html{
     height: 300px;
     width: 85%;
     display: flex;
+    /*flex-wrap: wrap;*/
     justify-content: space-around;
     margin: 10px auto;
 }
-/*.Contenedor{
-    height: 300px;
-    width: 85%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    grid-template-rows: 1fr;
-    background-color: rgb(158, 243, 176);
-    margin: 10px auto;
-}*/
-/*.promo{
-    background-color: rgb(247, 215, 167);
-    border: 5px solid black;
-}*/
-.promo{
+/*--------  CONOCENOS -------*/
+.Info{
     width: 100%;
     height: 100%;
     margin: 5px;
@@ -139,7 +128,97 @@ html{
     padding: 0px;
     margin: 0px 0px;
 }
+.inf-nosotros{
+    background-color:rgb(252, 240, 195); 
+    border: 3px solid #CD6155;
+}  
+.inf-nosotros > p{
+    color: #900C3F;    
+}
 
+#quienesSomos{
+    background-image: url('../img/QuienesSomos.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 3px solid #CD6155;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 75%;      
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    font-family: Frijol;
+    font-style: italic;
+    padding: 10px 10px; 
+}
+#Delatierra{
+    background-image:url('../img/dltmIndex.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 3px solid #CD6155;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 75%;      
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    font-family: Frijol;
+    font-style: italic;
+    padding: 10px 10px;    
+}
+#Delatierra > p{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    vertical-align: middle;   
+    font-family: Frijol;
+    color: #FFFFFF;
+    font-size: 2em;
+    background-color: rgba(252, 240, 195, 0.575);  
+    color: black;  
+}
+#quienesSomos > p{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    vertical-align: middle;   
+    font-family: Frijol;
+    color: #FFFFFF;
+    font-size: 2em;
+    background-color: rgba(252, 240, 195, 0.575);  
+    color: black; 
+} 
+#algomas{
+    background-image:url('../img/Ensalda1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 3px solid #CD6155;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 75%;      
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    font-family: Frijol;
+    font-style: italic;
+    padding: 10px 10px;
+}
+#algomas > p{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    vertical-align: middle;   
+    font-family: Frijol;
+    color: #FFFFFF;
+    font-size: 2em;
+    background-color: rgba(252, 240, 195, 0.575);  
+    color: black;  
+}
+
+/*-------------------------- FIN CONOCENOS  -----------------------*/
 #Productos .Descripcion{
     height: 75%;
    background-image: url(../img/PlatoRico.jpg); 
@@ -173,90 +252,4 @@ html{
     height: 100px;
     margin-top: 20px;
 
-}
-.quienesSomos{
-    background-image: url('../img/QuienesSomos.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-#Delatierra{
-    background-image:url('../img/dltmIndex.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: 3px solid #CD6155;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    height: 75%;      
-    margin: 0px 0px 0px 0px;
-    display: flex;
-    align-items: center;
-    font-family: Frijol;
-    font-style: italic;
-    padding: 10px 10px;
-
-    
-}
-#tituloDelatierra{
-    background-color:rgb(252, 240, 195); 
-    border: 3px solid #CD6155;    
-}
-#Delatierra > p{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    text-align: center;
-    vertical-align: middle;   
-    font-family: Frijol;
-    color: #FFFFFF;
-    font-size: 2em;
-    background-color: rgba(252, 240, 195, 0.575);  
-    color: black;  
-}
-#tituloDelatierra > p{
-    color: #900C3F;    
-}
-.quienesSomos > p{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    text-align: center;
-    vertical-align: middle;   
-    font-family: Frijol;
-    color: #FFFFFF;
-    font-size: 2em;
-    background-color: rgba(233, 136, 98, 0.575);    
-}
-#tituloalgomas{
-    background-color:rgb(252, 240, 195); 
-    border: 3px solid #CD6155;
-}
-#tituloalgomas > p{
-    color: #900C3F;    
-}    
-#algomas{
-    background-image:url('../img/Ensalda1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: 3px solid #CD6155;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    height: 75%;      
-    margin: 0px 0px 0px 0px;
-    display: flex;
-    align-items: center;
-    font-family: Frijol;
-    font-style: italic;
-    padding: 10px 10px;
-}
-#algomas > p{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    text-align: center;
-    vertical-align: middle;   
-    font-family: Frijol;
-    color: #FFFFFF;
-    font-size: 2em;
-    background-color: rgba(252, 240, 195, 0.575);  
-    color: black;  
 }
