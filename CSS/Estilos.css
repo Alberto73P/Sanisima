@@ -1,3 +1,8 @@
+:root{
+    --color-titulos: #900C3F;
+    --color-fondo-primario: rgb(252, 240, 195);
+}
+
 body{
     background-color: rgb(255, 248, 220);
     padding: 0px;
