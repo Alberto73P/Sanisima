@@ -28,6 +28,7 @@ html{
     background-color: #FFFFFF;                      
 
 }
+/*------------------- HOME DEL SITIO ----------------------------*/
 #Inicio{
     background-image:url('../img/Fondo2.jpeg');
     background-size: cover;
@@ -53,7 +54,9 @@ html{
     vertical-align: middle;
     background-color: rgba(176, 93, 77, 0.4);    
 }
-/*----- CSS PARA MENU DE DESPLAZAMIENTO*/
+/*------------------------------- FIN DE HOME DEL SITIO -----------------------------*/
+
+/*------------------------------- CSS PARA MENU DE NAVEGACION -----------------------------*/
 #menu{
     background-color: rgb(252, 240, 195);
     height: 80px;
@@ -62,7 +65,6 @@ html{
     display: flex;
     grid-area: barra;    
 }
-
 #Paginas{
     display: flex;
     justify-content: space-around;
@@ -102,6 +104,8 @@ html{
     border-bottom: 5px solid rgba(5, 235, 16, 0.932);
     background-color: white;
 }
+/*------------------------- AREA DE INFORMACION SOBRE EL RESTAURANTE -------------------------*/
+
 .Contenedor{
     height: 300px;
     width: 85%;
@@ -129,7 +133,8 @@ html{
 .Titulo > p{
     color: white;    
     font-family: PieDePollo;
-    font-size: 30px;
+    font-size: 30px
+    
     padding: 0px;
     margin: 0px 0px;
 }
@@ -140,9 +145,7 @@ html{
 .inf-nosotros > p{
     color: #900C3F;    
 }
-
-#quienesSomos{
-    background-image: url('../img/QuienesSomos.jpg');
+.Descripcion{
     background-size: cover;
     background-repeat: no-repeat;
     border: 3px solid #CD6155;
@@ -156,20 +159,23 @@ html{
     font-style: italic;
     padding: 10px 10px; 
 }
+#quienesSomos{
+    background-image: url('../img/QuienesSomos.jpg');    
+}
 #Delatierra{
     background-image:url('../img/dltmIndex.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: 3px solid #CD6155;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    height: 75%;      
-    margin: 0px 0px 0px 0px;
+}
+#quienesSomos > p{
     display: flex;
     align-items: center;
+    justify-content: center; 
+    text-align: center;
+    vertical-align: middle;   
     font-family: Frijol;
-    font-style: italic;
-    padding: 10px 10px;    
+    color: #FFFFFF;
+    font-size: 2em;
+    background-color: rgba(252, 240, 195, 0.575);  
+    color: black; 
 }
 #Delatierra > p{
     display: flex;
@@ -183,32 +189,8 @@ html{
     background-color: rgba(252, 240, 195, 0.575);  
     color: black;  
 }
-#quienesSomos > p{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    text-align: center;
-    vertical-align: middle;   
-    font-family: Frijol;
-    color: #FFFFFF;
-    font-size: 2em;
-    background-color: rgba(252, 240, 195, 0.575);  
-    color: black; 
-} 
 #algomas{
     background-image:url('../img/Ensalda1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: 3px solid #CD6155;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    height: 75%;      
-    margin: 0px 0px 0px 0px;
-    display: flex;
-    align-items: center;
-    font-family: Frijol;
-    font-style: italic;
-    padding: 10px 10px;
 }
 #algomas > p{
     display: flex;
@@ -228,21 +210,12 @@ html{
     height: 75%;
    background-image: url(../img/PlatoRico.jpg); 
    background-size: cover;
+   border: 3px solid rgb(255, 160, 122);
 }
-.Descripcion{
-    border: 3px solid rgb(255, 160, 122);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    height: 75%;      
-    margin: 0px 0px 0px 0px;
-    display: flex;
-    align-items: center;
-    font-family: Frijol;
-    font-style: italic;
-    padding: 10px 10px;
-}
-/* NOTA : ELiminar etiqueta p de descripcion*/
-
+.inf-productos{
+    background-color: rgb(255, 160, 122);
+    border: 3px solid  rgb(255, 160, 122);
+}  
 #Productos{
     margin-top: 40px ;
     grid-area: Productos;
@@ -256,5 +229,4 @@ html{
     background-color: lightslategray;
     height: 100px;
     margin-top: 20px;
-
 }
