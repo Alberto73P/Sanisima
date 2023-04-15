@@ -1,0 +1,55 @@
+:root{
+    --color-titulos: #900C3F;
+    --color-fondo-primario: rgb(252, 240, 195);
+}
+
+body{
+    background-color: rgb(255, 248, 220);
+    padding: 0px;
+    margin: 0px;
+    height: auto;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+    font-family: Handmade;
+    color: black;
+}
+html{
+    scroll-behavior: smooth;
+}
+.ContenedorMadre{
+    height: 100%;
+    display: grid;
+    grid-template-areas:'barra'
+                        'inicio'
+                        'Conocenos'
+                        'Productos'
+                        'Extra'
+                        'footer';  
+    background-color: #FFFFFF;                      
+
+}
+#Inicio{
+    /*background-image:url('../img/ConocenosInicio.jpg');*/
+    background-color: #900C3F;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 100%;
+    grid-area: inicio; 
+    color: #FFFFFF;
+}
+#Inicio > p{       
+    font-family: Pastelito;
+    font-size: 550%;
+    left: 50%;
+    position: absolute;
+    top: 40%;  
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(176, 93, 77, 0.4);    
+}
