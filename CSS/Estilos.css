@@ -1,7 +1,12 @@
-/*:root{
+:root{
     --color-titulos: #900C3F;
     --color-fondo-primario: rgb(252, 240, 195);
-}*/
+}
+
+div, p{
+    margin: 0;
+    padding: 0;
+}
 
 body{
     background-color: rgb(248, 248, 248);
@@ -9,282 +14,170 @@ body{
     margin: 0px;
     height: 100vh;
 }
+
 a:link, a:visited, a:active {
     text-decoration:none;
     font-family: Handmade;
     color: black;
 }
+
 html{
     scroll-behavior: smooth;
 }
+
 .ContenedorMadre{
     height: 100%;
+    width: 100%;
     display: grid;
-    grid-template-areas:'barra'
+    grid-template-rows: 80px 1fr 80px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        'barra'
+        'contenido'
+        'footer';
+    /*grid-template-areas:'barra'
                         'inicio'
                         'Conocenos'
                         'Productos'
                         'Extra'
-                        'footer';  
+                        'footer'; */ 
     background-color: #FFFFFF;                      
 
 }
-/*------------------- HOME DEL SITIO ----------------------------*/
-#Inicio{
-    background-image:url('../img/Fondo2.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 500px;
-    width: 90%;
-    margin: 20px auto;
-    grid-area: inicio; 
-    color: #FFFFFF;
-    border-radius: 30px;
+/*------------------- CONTENIDO PRINCIPAL -------------------------*/
+#contenido_principal{
+    grid-area: contenido;
 }
-#Inicio > p{       
-    font-family: Pastelito;
-    font-size: 550%;
-    left: 50%;
-    position: absolute;
-    top: 40%;  
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    vertical-align: middle;
-    background-color: rgba(176, 93, 77, 0.4);    
-}
-/*------------------------------- FIN DE HOME DEL SITIO -----------------------------*/
 
 /*------------------------------- CSS PARA MENU DE NAVEGACION -----------------------------*/
 #menu{
     background-color: rgb(252, 240, 195);
-    height: 80px;
-    width: 100%;
-    margin: 0px 0px 0px 0px;
     display: flex;
-    grid-area: barra;    
+    grid-area: barra;
 }
+
+#Marca{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 35%;
+    font-size: 60px;
+    border-bottom: 3px solid black;
+}
+
+#Marca p{    
+    padding-top: 20px;
+    font-family:LetraBonita;
+}
+
 #Paginas{
     display: flex;
     justify-content: space-around;
     width: 65%;
 }
-#Marca{
-    padding-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 35%;
-    border-bottom: 3px solid black;
-}
-#Marca p{    
-    padding-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0px 0px 0px 0px;
-    font-size: 60px;
-    font-family:LetraBonita;
-}
+
 .navegador {            
     color: black;
     width: 100%;
     display: flex;
     align-items: center;
-    align-content: center;
     justify-content: center;
     border-bottom: 3px solid black;
 }
+
 .navegador p{
     font-size: 25px;
     font-family: Handmade;
 }
+
 .navegador:hover {            
     border-bottom: 5px solid rgba(5, 235, 16, 0.932);
     background-color: white;
 }
-/*------------------------- AREA DE INFORMACION SOBRE EL RESTAURANTE -------------------------*/
 
-.Contenedor{
-    height: 300px;
-    width: 85%;
-    display: flex;
-    /*flex-wrap: wrap;*/
-    justify-content: space-around;
-    margin: 10px auto;
-}
-/*--------  CONOCENOS -------*/
-.Info{
-    width: 100%;
-    height: 100%;
-    margin: 5px;
-    border-radius: 15px;
-}
-.Titulo {
-    height: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: center;    
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    background-color:rgb(255, 160, 122);
-}
-.Titulo > p{
-    color: white;    
-    font-family: PieDePollo;
-    font-size: 30px;    
-    padding: 0px;
-    margin: 0px 0px;
-}
-.inf-nosotros{
-    background-color:rgb(252, 240, 195); 
-    border: 3px solid #CD6155;
-}  
-.inf-nosotros > p{
-    color: #900C3F;    
-}
-.Descripcion{
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: 3px solid #CD6155;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    height: 75%;      
-    margin: 0px 0px 0px 0px;
-    display: flex;
-    align-items: center;
-    font-family: Frijol;
-    font-style: italic;
-    padding: 10px 10px; 
-}
-#quienesSomos{
-    background-image: url('../img/QuienesSomos.jpg');    
-}
-#Delatierra{
-    background-image:url('../img/dltmIndex.png');
-}
-#quienesSomos > p{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    text-align: center;
-    vertical-align: middle;   
-    font-family: Frijol;
-    color: #FFFFFF;
-    font-size: 2em;
-    background-color: rgba(252, 240, 195, 0.575);  
-    color: black; 
-}
-#Delatierra > p{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    text-align: center;
-    vertical-align: middle;   
-    font-family: Frijol;
-    color: #FFFFFF;
-    font-size: 2em;
-    background-color: rgba(252, 240, 195, 0.575);  
-    color: black;  
-}
-#algomas{
-    background-image:url('../img/Ensalda1.jpg');
-}
-#algomas > p{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    text-align: center;
-    vertical-align: middle;   
-    font-family: Frijol;
-    color: #FFFFFF;
-    font-size: 2em;
-    background-color: rgba(252, 240, 195, 0.575);  
-    color: black;  
+#menu .icono{
+    width: 80px;
+    height: 80px;
+
+    display: none;
 }
 
-/*-------------------------- FIN CONOCENOS  -----------------------*/
-#Promos{
-    height: 75%;
-   background-image: url(../img/PlatoRico.jpg); 
-   background-size: cover;
-   border: 3px solid rgb(255, 160, 122);   
-}
-#Promos p{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    text-align: center;
-    vertical-align: middle;   
-    font-family: Frijol;
-    color: #FFFFFF;
-    font-size: 1.5em;
-    background-color: rgba(252, 240, 195, 0.575);  
-    color: black;
-}
-#Menu{
-   height: 75%;
-   background-image: url(../img/menu.jpg); 
-   background-size: cover;
-   border: 3px solid rgb(255, 160, 122);
-}
-#Menu p{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    text-align: center;
-    vertical-align: middle;   
-    font-family: Frijol;
-    color: #FFFFFF;
-    font-size: 1.5em;
-    background-color: rgba(252, 240, 195, 0.575);  
-    color: black;
-}
-#extra{
-    height: 75%;
-   background-image: url(../img/Ensalda1.jpg); 
-   background-size: cover;
-   border: 3px solid rgb(255, 160, 122);
-}
-#extra p{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    text-align: center;
-    vertical-align: middle;   
-    font-family: Frijol;
-    color: #FFFFFF;
-    font-size: 2em;
-    background-color: rgba(252, 240, 195, 0.575);  
-    color: black;
-}
-.inf-productos{
-    background-color: rgb(255, 160, 122);
-    border: 3px solid  rgb(255, 160, 122);
-}  
-#Productos{
-    margin-top: 40px ;
-    grid-area: Productos;
-}
-.Titulo{
-    color: white;    
-    font-family: PieDePollo;
-    font-size: 30px;    
-    padding: 0px;
-    margin: 0px 0px;
-}
-
+/*--------------------- FOOTER -------------------------*/
 #Footer{
-    grid-area: footer;
-    background-color: lightslategray;
-    height: 90px;
     margin-top: 20px;
+    padding-left: 20px;
+    
+    display: flex;
+    align-items: center;
+
+    grid-area: footer;
+
     background-color: #DAF7A6;
 }
-#Extra-Aux{
-    height: 20px;
-    width: 100%;
+
+/*--------------------- MEDIA QUERIES ------------------*/
+
+@media(max-width: 850px){
+    /*---------------------- MENU ----------------------*/
+    #menu{
+        border-bottom: 3px solid black;
+
+        justify-content: space-between;
+    }
+
+    #Marca{
+        width: 50%;
+
+        font-size: 42px;
+        border: none;
+    }
+
+    #Marca img{
+        width: 65px;
+        height: 65px;
+    }
+
+    #Paginas{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        position: absolute;
+        top: 80px;
+        right: -100%;
+
+        transition: right 1s ease;
+        background-color: var(--color-fondo-primario);
+    }
+
+    #menu .icono{
+        padding-right: 15px;
+        width: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
 }
 
+@media(max-width: 400px){
+    /*-------------------- MENU --------------------------*/
+    #Marca{
+        width: 70%;
+        font-size: 32px;
+    }
+
+    #Marca img{
+        width: 50px;
+        height: 50px;
+    }
+
+    #menu .icono{
+        width: 30%;
+    }
+
+    #menu .icono img{
+        width: 30px;
+        height: 30px;
+    }
+}

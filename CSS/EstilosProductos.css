@@ -1,45 +1,34 @@
-body{
-    height: 100%;;
-}
-.ContenedorP{
-    height: 100%;   
+#contenido_principal{
     display: grid;
-    grid-template-areas:'barra'
+    grid-template-areas:
                         'inicio'
-                        'indice'          
-                        ;  
-    background-color: #FFFFF7;                      
-
+                        'indice';  
+    background-color: #FFFFF7;   
 }
+
 #InicioProductos{
-    background-color: #F7DC6F ;
-    background-size: cover;
-    background-repeat: no-repeat;
+    grid-area: inicio;
+
     height: 100px;
-    grid-area: inicio; 
+
+    background-color: #F7DC6F; 
     color: #FFFFFF;
     font-family: Pastelito;
     font-size: 550%;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    vertical-align: middle;
 }
-#InicioProductos > p{
-    margin: 0px;
-}
+
 #indice{
-    background-color: #FEF5E7;
-    height: auto;
-    margin: 0px;
     grid-area: indice;
+    height: auto;
+
+    background-color: #FEF5E7;
 }
-#Extra{
-    grid-area: Extra;
-    height: 20px;
-    width: 100%;
-}
+
 .Seccion_carta{
     background-color: /*rgba(249, 231, 159, 0.801)*/ #FFF;
     display: flex;
@@ -49,6 +38,7 @@ body{
     width: 95%;
     margin: auto;    
 }
+
 h3{
     background-color: rgba(248, 196, 113, 0.849);
     margin: 5px auto;
@@ -58,6 +48,7 @@ h3{
     text-align: center;
     color: #7B241C;
 }
+
 .elemento_sec{
     width: 600px;
     height: 260px;
@@ -65,20 +56,22 @@ h3{
     border: 3px solid #CD6155;
     margin-bottom: 5px;
 }   
+
 .descripcion{
     width: 60%;
     margin: 0px;
 }
+
 .nomplatillo{
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     font-family: frijol;
-    background-color: #FFFFFF;
-    margin: 0px;    
+    background-color: #FFFFFF;   
     height: 20%;
 }
+
 .contenido{
     display: flex;
     align-items: center;
@@ -86,10 +79,10 @@ h3{
     text-align: center;
     font-family: frijol;
     background-color: #FFFFFF;
-    padding: 3px 5px;
-    margin: 0px;   
+    padding: 3px 5px;  
     height: 75%;
 }
+
 .img_desc{
     background-size:cover;
     background-position:center;
@@ -97,6 +90,7 @@ h3{
     width: 40%;
     height: 100%;
 }
+
 #PiedePagina{
     height: 90px;
     margin-top: 20px;

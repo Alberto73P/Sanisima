@@ -1,0 +1,155 @@
+#contenedor_principal{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        'inicio'
+        'conocenos'
+        'productos';
+}
+
+/*------------------- HOME DEL SITIO ----------------------------*/
+
+#Inicio{
+    grid-area: inicio; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image:url('../img/Fondo2.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    height: 500px;
+    width: 90%;
+    margin: 20px auto;
+
+    color: #FFFFFF;
+    border-radius: 30px;
+}
+
+#Inicio > p{
+    width: 70%;
+    height: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 80px;
+    font-family: Pastelito;
+    text-align: center;
+
+    background-color: rgba(176, 93, 77, 0.4);    
+}
+/*------------------------------- FIN DE HOME DEL SITIO -----------------------------*/
+
+/*------------------------- AREA DE INFORMACION SOBRE EL RESTAURANTE -------------------------*/
+
+.Contenedor{
+    width: 85%;
+    margin: 10px auto;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*--------  CONOCENOS -------*/
+#Conocenos{
+    grid-area: conocenos;
+}
+
+.Info{
+    width: 30%;
+    min-width: 300px;
+    height: 400px;
+    margin-top: 20px;
+
+    border: 4px solid #CD6155;
+    border-radius: 15px;
+}
+
+.Titulo {
+    width: 100%;
+    height: 25%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    
+    border-radius: 12px 12px 0 0;
+    background-color:rgb(255, 160, 122);
+}
+
+.Titulo p{
+    text-align: center;
+    font-family: PieDePollo;
+    font-size: 30px;
+}
+
+#Conocenos .Titulo{
+    color: #900C3F;
+    background-color:rgb(252, 240, 195); 
+}
+
+.Descripcion{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 75%;
+
+    display: flex;
+    align-items: center;
+    
+    font-family: Frijol;
+    font-style: italic;
+
+    box-sizing: border-box;
+    border-top: 4px solid #CD6155; 
+    border-radius: 0 0 12px 12px;
+}
+
+.Descripcion p{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+
+    font-size: 2em;
+    background-color: rgba(252, 240, 195, 0.575);
+}
+
+#quienesSomos{
+    background-image: url('../img/QuienesSomos.jpg');    
+}
+
+#Delatierra{
+    background-image:url('../img/dltmIndex.png');
+}
+
+#algomas{
+    background-image:url('../img/Ensalda1.jpg');
+}
+
+/*-------------------------- FIN CONOCENOS  -----------------------*/
+#Productos{
+    margin-top: 40px ;
+    grid-area: Productos;
+}
+
+#Productos .Titulo{
+    background-color: rgb(255, 160, 122);
+    color: white;
+}
+
+#Promos{
+    background-image: url(../img/PlatoRico.jpg); 
+}
+
+#Menu{
+   background-image: url(../img/menu.jpg);
+}
+
+#extra{
+   background-image: url(../img/Ensalda1.jpg); 
+}
