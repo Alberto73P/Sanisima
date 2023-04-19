@@ -181,3 +181,18 @@ html{
         height: 30px;
     }
 }
+/*---------------------- PRODUCTOS -------------------------*/
+@media(max-width: 850px){
+    .nomplatillo{
+        font-size: 14px;
+    }
+    .contenido{
+        font-size: 14px;
+    }
+
+    #indice li{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+}
