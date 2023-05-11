@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 11-05-2023 a las 10:57:42
+-- Tiempo de generación: 11-05-2023 a las 23:48:21
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -41,11 +41,22 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`userID`, `password`, `nombre`, `apellido`) VALUES
-('Diegoluna@sanisima.com', 'luna', 'Diego', 'Luna'),
 ('Alberto@sanisima.com', 'beto', 'Alberto', 'Mendoza'),
 ('BraulioVaz@sanisima.com', 'Braulio', 'Braulio', 'Vazquez'),
+('Diegoluna@sanisima.com', 'luna', 'Diego', 'Luna'),
 ('samantha@sanisima.com', 'samantha', 'Samantha', 'Corona'),
-('user1@sanisima.com', 'user1', 'user1', 'user1');
+('User1@sanisima.com', 'user', 'User', 'User'),
+('User2@sanisima.com', 'user2', 'User2', 'User2');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`userID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

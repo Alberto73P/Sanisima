@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
     <link rel="stylesheet" href="../CSS/EstilosLogin.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/Fuentes.css" type="text/css">
 </head>
 <body>
 <div class="login-box">        

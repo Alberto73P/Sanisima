@@ -21,6 +21,9 @@ body {
 h1{
     text-align: center;
     margin: auto;
+	font-family:  LetraBonita;
+	font-size: 35px;
+
 }
 
 h2 {

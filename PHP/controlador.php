@@ -33,7 +33,7 @@ if (!empty($_POST["btnRegistrar"])) {
         if ($datos=$sql->fetch_object()) {
            header("location:../Index.html");                
         } else {
-            echo" Algo salio mal ";
+            echo" Algo salio mal... Intente de nuevo por favor";            
         }
         
     }
