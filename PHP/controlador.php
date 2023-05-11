@@ -2,7 +2,7 @@
 
     if (!empty($_POST["btnIngresar"])) {
         if (empty($_POST["txtUsuario"]) and empty($_POST["txtclave"])) {
-            echo"Datos vacios";
+            echo"Datos faltantes";
         } else {
             $usuario=$_POST["txtUsuario"];
             $clave=$_POST["txtclave"];
