@@ -65,18 +65,9 @@
     </head>
     <body>
         <div class="ContenedorMadre">
-            <div id="menu">
-                <div id="Marca">
-                    <img src="../img/Logo.png" width="80" height="80">
-                    <p>Sanisima</p> 
-                </div>
-                <div id="Paginas">
-                    <div class="navegador"><a href="../Index.html"><p>Inicio</p></a></div>
-                    <div class="navegador"><a href="Conocenos.html"><p>Conocenos</p></a></div>
-                    <div class="navegador"><a href="Productos.html"><p>Productos</p></a></div>
-                    <div class="navegador izq"><a href="Contacto.html"><p>Contactanos</p></a></div>
-                </div>            
-            </div>
+            
+            <?php require($_SERVER["DOCUMENT_ROOT"] . "/Paginas/Encabezado.php");?>
+            
             <div id="ContenidoPrincipal">
                 <h2 class="titulo_seccion">Contactanos</h2>
                 
