@@ -1,0 +1,40 @@
+<?php
+require($_SERVER["DOCUMENT_ROOT"] . "/PHP/conexion.php");
+
+if (!empty($_POST["btnRegistrar"])) {
+    if (empty($_POST["txtCorreo"]) and empty($_POST["txtclave"])) {
+        $error = "Ha dejado campos vacios";
+    }
+    else {
+	$cel=$_POST["txtNumeroCel"]; 	// numero telefonico
+	$CP=$_POST["txtCP"]; 	     	// Codigo Postal
+	$colonia=$POST["txtColonia"];	// Colonia	
+        $ID=$_POST["txtCorreo"];	//Correo
+        $clave=$_POST["txtclave"];	// Contraseña
+        $nom=$_POST["txtNombre"];	// Nombre
+        $ape=$_POST["txtApellido"];	// Apellidos
+	$calle = $_POST["txtCalle"];	// Calle
+	$nac = $_POST["txtnac"];	// fecha nacimiento
+	$num_ext = $_POST["txtNumeroext"]
+        
+        $sentencia = $conexion->query("SELECT count(userID) FROM usuarios WHERE userID = '$ID'");
+
+        if($sentencia->fetch_row()[0] > 0){
+            $error = "El usuario ya existe";
+        }
+        else{
+            $sentencia = $conexion->prepare(
+		"INSERT INTO `usuarios` (`userID`, `password`, `nombre`, `apellido`,    		`telefono`,`colonia`,`calle`,`num_ext`,`CP`,`fecha_nac`) 
+		VALUES ('$ID', '$clave', '$nom', '$ape','$cel','$colonia','$calle','num_ext','$CP','$nac')");
+        
+            $sentencia->execute();
+            
+            if ($sentencia->affected_rows == 1) {
+           header("Location:/");               
+            } else {
+                $error = " Algo salio mal... Intente de nuevo por favor";            
+            }
+        }
+    }
+}
+?>
