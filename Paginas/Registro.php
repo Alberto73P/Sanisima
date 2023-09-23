@@ -72,7 +72,7 @@ if (!empty($_POST["btnRegistrar"])) {
 			<label>Apellido</label>
 		</div>
         <div class="user-box">
-            <input  type="text" name="txtCorreo"  required title="Ingresa tu correo"></input>
+            <input  type="email" name="txtCorreo"  required title="Ingresa tu correo"></input>
 			<label>Correo electrónico</label>
 		</div>
 		<div class="user-box">
