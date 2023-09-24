@@ -1,5 +1,6 @@
 <?php
 require($_SERVER["DOCUMENT_ROOT"] . "/PHP/conexion.php");
+require($_SERVER["DOCUMENT_ROOT"] . "/PHP/Encriptador.php");
 
 session_start();
 
@@ -18,16 +19,16 @@ if (!empty($_POST["btnRegistrar"])) {
         $error = "Debe aceptar los terminos y condiciones";
     }
     else {
-        $celular = $_POST["txtNumeroCel"];
+        $celular = Encriptador::encriptar($_POST["txtNumeroCel"]);
         $CP = $_POST["txtCP"];
         $colonia = $_POST["txtColonia"];	
-        $correo = $_POST["txtCorreo"];
-        $clave = $_POST["txtClave"];
-        $nombre = $_POST["txtNombre"];
-        $apellidos = $_POST["txtApellido"];
-        $calle = $_POST["txtCalle"];
+        $correo = Encriptador::encriptar($_POST["txtCorreo"]);
+        $clave = Encriptador::encriptarClave($_POST["txtClave"]);
+        $nombre = Encriptador::encriptar($_POST["txtNombre"]);
+        $apellidos = Encriptador::encriptar($_POST["txtApellido"]);
+        $calle = Encriptador::encriptar($_POST["txtCalle"]);
         $fechaNacimiento = $_POST["txtFechaNac"];
-        $numeroExterior = $_POST["txtNumeroExt"];
+        $numeroExterior = Encriptador::encriptar($_POST["txtNumeroExt"]);
         
         $sentencia = $conexion->query("SELECT count(userID) FROM usuarios WHERE userID = '$correo'");
 
@@ -35,13 +36,13 @@ if (!empty($_POST["btnRegistrar"])) {
             $error = "El usuario ya existe";
         }
         else{
-            $SQL = "INSERT INTO `usuarios` (`userID`, `password`, `nombre`, `apellido`,`telefono`,`colonia`,`calle`,`num_ext`,`CP`,`fecha_nac`) 
-                VALUES ('$correo', '$clave', '$nombre', '$apellidos','$celular','$colonia','$calle','$numeroExterior','$CP','$fechaNacimiento')";
+            $SQL = "INSERT INTO `usuarios` (`userID`, `password`, `nombre`, `apellido`,`telefono`,`colonia`,`calle`,`num_ext`,`CP`,`fecha_nac`, `fecha_reg`) 
+                VALUES ('$correo', '$clave', '$nombre', '$apellidos','$celular','$colonia','$calle','$numeroExterior','$CP','$fechaNacimiento', CURDATE())";
             $sentencia = $conexion->prepare($SQL);
             $sentencia->execute();
             
             if ($sentencia->affected_rows == 1) {
-                $_SESSION["usuario"] = $correo;
+                $_SESSION["usuario"] = Encriptador::desencriptar($correo);
                 header("Location:/");               
             } else {
                 $error = " Algo salio mal... Intente de nuevo por favor";            
