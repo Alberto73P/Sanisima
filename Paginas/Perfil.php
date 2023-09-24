@@ -1,5 +1,6 @@
 <?php 
     require($_SERVER["DOCUMENT_ROOT"] . "/PHP/conexion.php");
+    require($_SERVER["DOCUMENT_ROOT"] . "/PHP/Encriptador.php");
 
     session_start();
 
@@ -11,16 +12,17 @@
     $nombre = "";
     $apellidos = "";
     $telefono = "";
-    $correo = $_SESSION["usuario"];
+    $correo = Encriptador::encriptar($_SESSION["usuario"]);
     
     $SQL = "SELECT nombre, apellido, telefono FROM usuarios WHERE userID = '$correo';";
     $resultado = $conexion->query($SQL);
     
     if($resultado){
         $fila = $resultado->fetch_row();
-        $nombre = $fila[0];
-        $apellidos = $fila[1];
-        $telefono = $fila[2];
+        $correo = Encriptador::desencriptar($correo);
+        $nombre = Encriptador::desencriptar($fila[0]);
+        $apellidos = Encriptador::desencriptar($fila[1]);
+        $telefono = Encriptador::desencriptar($fila[2]);
     }
 ?>
 

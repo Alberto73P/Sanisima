@@ -1,6 +1,7 @@
 <?php 
     require($_SERVER["DOCUMENT_ROOT"] . "/PHP/conexion.php");
-
+    require($_SERVER["DOCUMENT_ROOT"] . "/PHP/Encriptador.php");
+    
     session_start();
 
     if(empty($_SESSION["usuario"])){
@@ -12,16 +13,17 @@
     $calle = "";
     $numeroExterior = "";
     $codigoPostal = "";
-    $correo = $_SESSION["usuario"];
+    $correo = Encriptador::encriptar($_SESSION["usuario"]);
     
     $SQL = "SELECT colonia, calle, num_ext, CP FROM usuarios WHERE userID = '$correo';";
     $resultado = $conexion->query($SQL);
     
     if($resultado){
         $fila = $resultado->fetch_row();
+        $correo = Encriptador::desencriptar($correo);
         $colonia = $fila[0];
-        $calle = $fila[1];
-        $numeroExterior = $fila[2];
+        $calle = Encriptador::desencriptar($fila[1]);
+        $numeroExterior = Encriptador::desencriptar($fila[2]);
         $codigoPostal = $fila[3];
     }
 ?>
