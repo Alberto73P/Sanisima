@@ -42,7 +42,7 @@ if (!empty($_POST["btnRegistrar"])) {
             
             if ($sentencia->affected_rows == 1) {
                 $_SESSION["usuario"] = $correo;
-                //header("Location:/");               
+                header("Location:/");               
             } else {
                 $error = " Algo salio mal... Intente de nuevo por favor";            
             }
