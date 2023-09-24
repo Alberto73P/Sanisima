@@ -1,8 +1,10 @@
 <?php
 require($_SERVER["DOCUMENT_ROOT"] . "/PHP/conexion.php");
 
+session_start();
+
 if (!empty($_POST["btnIngresar"])) {
-    if (empty($_POST["txtUsuario"]) and empty($_POST["txtclave"])) {
+    if (empty($_POST["txtUsuario"]) || empty($_POST["txtclave"])) {
         $error = "Datos faltantes";
     }
     else {    
@@ -11,7 +13,9 @@ if (!empty($_POST["btnIngresar"])) {
         $sql=$conexion->query(" select * from usuarios where userID = '$usuario' and password = '$clave'");
             
         if ($datos=$sql->fetch_object()) {
-            header("Location:/");                
+            $_SESSION["usuario"] = $usuario;
+            header("Location:/");
+            die;
         } else {
             $error = "Acceso Denegado";
         }    

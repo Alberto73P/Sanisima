@@ -3,10 +3,11 @@
         session_start();
     }
 
+    $haySesion = !empty($_SESSION["usuario"]);
     $link = "/Paginas/InicioSesion.php";
     $contenido = "Iniciar Sesión";
 
-    if(!empty($_SESSION["usuario"])){
+    if($haySesion){
         $link = "/Paginas/Perfil.php";
         $contenido = "Ver Perfil";
     }
@@ -28,6 +29,11 @@
                 <p><?php echo $contenido; ?></p>
             </a>
         </div>
+        <?php
+            if($haySesion){
+                echo "<div class='navegador'><a href='/PHP/CerrarSesion.php'><p>Cerrar Sesion</p></a></div>";
+            }
+        ?>
     </div>
 
     <div class="icono">
