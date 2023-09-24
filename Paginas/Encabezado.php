@@ -1,4 +1,8 @@
 <?php
+    if(session_status() != PHP_SESSION_ACTIVE){
+        session_start();
+    }
+
     $link = "/Paginas/InicioSesion.php";
     $contenido = "Iniciar Sesión";
 

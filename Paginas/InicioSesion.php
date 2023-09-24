@@ -59,11 +59,11 @@ if (!empty($_POST["btnIngresar"])) {
 	<form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
         <div class="user-box">
             <input  type="text" name="txtUsuario"  required="" ></input>
-			<label>Nombre de Usuario</label>
+			<label class="etiqueta">Nombre de Usuario</label>
 		</div>
 			<div class="user-box">
                 <input  type="password" name="txtclave"  required="" ></input>
-				<label>Contraseña</label>
+				<label class="etiqueta">Contraseña</label>
 			</div>
 		<div class="envioDatos">
             <input type="submit" class="boton" value="Iniciar Sesion" name="btnIngresar">
