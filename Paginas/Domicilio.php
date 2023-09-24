@@ -8,19 +8,21 @@
         die;
     }
 
-    $nombre = "";
-    $apellidos = "";
-    $telefono = "";
+    $colonia = "";
+    $calle = "";
+    $numeroExterior = "";
+    $codigoPostal = "";
     $correo = $_SESSION["usuario"];
     
-    $SQL = "SELECT nombre, apellido, telefono FROM usuarios WHERE userID = '$correo';";
+    $SQL = "SELECT colonia, calle, num_ext, CP FROM usuarios WHERE userID = '$correo';";
     $resultado = $conexion->query($SQL);
     
     if($resultado){
         $fila = $resultado->fetch_row();
-        $nombre = $fila[0];
-        $apellidos = $fila[1];
-        $telefono = $fila[2];
+        $colonia = $fila[0];
+        $calle = $fila[1];
+        $numeroExterior = $fila[2];
+        $codigoPostal = $fila[3];
     }
 ?>
 
@@ -46,23 +48,23 @@
         <div id="contenido_principal">
             <form method="post">
                 <div>
-                    <label for="txtNombre">Nombre: </label>
-                    <input type="text" name="txtNombre" value="<?php echo $nombre; ?>"/>
+                    <label for="txtColonia">Colonia: </label>
+                    <input type="text" name="txtColonia" value="<?php echo $colonia; ?>"/>
                 </div>
                 
                 <div>
-                    <label for="txtApellidos">Apellidos: </label>
-                    <input type="text" name="txtApellidos" value="<?php echo $apellidos; ?>"/>
+                    <label for="txtCalle">Calle: </label>
+                    <input type="text" name="txtColonia" value="<?php echo $calle; ?>"/>
                 </div>
                 
                 <div>
-                    <label for="txtCorreo">Correo: </label>
-                    <input type="text" name="txtCorreo" value="<?php echo $correo; ?>"/>
+                    <label for="txtNumeroExterior">No. Exterior: </label>
+                    <input type="text" name="txtNumeroExterior" value="<?php echo $numeroExterior; ?>"/>
                 </div>
 
                 <div>
-                    <label for="txtNumeroCel">Telefono: </label>
-                    <input type="text" name="txtNumeroCel" value="<?php echo $telefono; ?>"/>
+                    <label for="txtCP">Codigo Postal: </label>
+                    <input type="text" name="txtCP" value="<?php echo $codigoPostal; ?>"/>
                 </div>
 
                 <input type="submit" value="Actualizar"/>
