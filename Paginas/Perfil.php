@@ -46,7 +46,7 @@
         <?php require($_SERVER["DOCUMENT_ROOT"] . "/Paginas/BarraLateral.html");?>
 
         <div id="contenido_principal">
-            <form method="post">
+            <form method="post" action="/PHP/ActualizarPerfil.php">
                 <div>
                     <label for="txtNombre">Nombre: </label>
                     <input type="text" name="txtNombre" value="<?php echo $nombre; ?>"/>
@@ -67,7 +67,7 @@
                     <input type="text" name="txtNumeroCel" value="<?php echo $telefono; ?>"/>
                 </div>
 
-                <input type="submit" value="Actualizar"/>
+                <input type="submit" name="sbActualizar" value="Actualizar"/>
             </form>
         </div>
 

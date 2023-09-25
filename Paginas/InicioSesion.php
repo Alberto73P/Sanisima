@@ -1,5 +1,6 @@
 <?php
 require($_SERVER["DOCUMENT_ROOT"] . "/PHP/conexion.php");
+require($_SERVER["DOCUMENT_ROOT"] . "/PHP/Encriptador.php");
 
 session_start();
 
@@ -8,17 +9,22 @@ if (!empty($_POST["btnIngresar"])) {
         $error = "Datos faltantes";
     }
     else {    
-        $usuario=$_POST["txtUsuario"];
-        $clave=$_POST["txtclave"];
-        $sql=$conexion->query(" select * from usuarios where userID = '$usuario' and password = '$clave'");
+        $usuario = Encriptador::encriptar($_POST["txtUsuario"]);
+        $clave = $_POST["txtclave"];
+        
+        $resultado=$conexion->query("SELECT `password` FROM usuarios WHERE userID = '$usuario';");
             
-        if ($datos=$sql->fetch_object()) {
-            $_SESSION["usuario"] = $usuario;
-            header("Location:/");
-            die;
-        } else {
-            $error = "Acceso Denegado";
-        }    
+        if ($resultado) {
+            $claveEncriptada = $resultado->fetch_row()[0];
+            
+            if(Encriptador::verificarClave($clave, $claveEncriptada)){
+                $_SESSION["usuario"] = Encriptador::desencriptar($usuario);
+                header("Location:/");
+                die;
+            }
+        }
+        
+        $error = "Acceso Denegado";  
     }    
 }
 ?>
