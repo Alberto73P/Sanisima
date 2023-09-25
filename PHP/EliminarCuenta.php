@@ -1,5 +1,6 @@
 <?php
     require($_SERVER["DOCUMENT_ROOT"] . "/PHP/conexion.php");
+    require($_SERVER["DOCUMENT_ROOT"] . "/PHP/Encriptador.php");
 
     session_start();
     $sesionInactiva = empty($_SESSION["usuario"]);
@@ -9,7 +10,7 @@
         die;
     }
 
-    $correo = $_SESSION["usuario"];
+    $correo = Encriptador::encriptar($_SESSION["usuario"]);
     $SQL = "DELETE FROM usuarios WHERE userID = '$correo';";
     $conexion->query($SQL);
 
