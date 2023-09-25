@@ -48,7 +48,7 @@
         <?php require($_SERVER["DOCUMENT_ROOT"] . "/Paginas/BarraLateral.html");?>
 
         <div id="contenido_principal">
-            <form method="post">
+            <form method="post" action="/PHP/ActualizarDomicilio.php">
                 <div>
                     <label for="txtColonia">Colonia: </label>
                     <input type="text" name="txtColonia" value="<?php echo $colonia; ?>"/>
@@ -56,7 +56,7 @@
                 
                 <div>
                     <label for="txtCalle">Calle: </label>
-                    <input type="text" name="txtColonia" value="<?php echo $calle; ?>"/>
+                    <input type="text" name="txtCalle" value="<?php echo $calle; ?>"/>
                 </div>
                 
                 <div>
@@ -69,7 +69,7 @@
                     <input type="text" name="txtCP" value="<?php echo $codigoPostal; ?>"/>
                 </div>
 
-                <input type="submit" value="Actualizar"/>
+                <input type="submit" name="sbActualizar" value="Actualizar"/>
             </form>
         </div>
 

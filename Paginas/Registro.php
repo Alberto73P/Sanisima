@@ -37,7 +37,7 @@ if (!empty($_POST["btnRegistrar"])) {
         }
         else{
             $SQL = "INSERT INTO `usuarios` (`userID`, `password`, `nombre`, `apellido`,`telefono`,`colonia`,`calle`,`num_ext`,`CP`,`fecha_nac`, `fecha_reg`) 
-                VALUES ('$correo', '$clave', '$nombre', '$apellidos','$celular','$colonia','$calle','$numeroExterior','$CP','$fechaNacimiento', CURDATE())";
+                VALUES ('$correo', '$clave', '$nombre', '$apellidos','$celular','$colonia','$calle','$numeroExterior',$CP,'$fechaNacimiento', CURDATE())";
             $sentencia = $conexion->prepare($SQL);
             $sentencia->execute();
             
