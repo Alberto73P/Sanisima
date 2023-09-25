@@ -40,7 +40,7 @@ CREATE TABLE `usuarios` (
 CREATE TABLE `metodos_pago` (
   `cuenta` varchar(300) PRIMARY KEY,
   `fecha_caducidad` date NOT NULL,
-  `codigo_seguridad` varchar(300) NOT NULL,
+  `codigo_seguridad` varchar(5) NOT NULL,
   `usuario` varchar(300) NOT NULL,
   CONSTRAINT `fk_usuario_metodo_pago` 
     FOREIGN KEY (`usuario`) REFERENCES `usuarios`(`userID`) 
