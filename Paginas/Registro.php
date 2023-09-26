@@ -63,7 +63,8 @@ if (!empty($_POST["btnRegistrar"])) {
 </head>
 <style>
     .login-box {
-	margin: 50px auto 0px;
+	margin: 10px auto ;
+    width: 80%;
     }
     .error-box{
         background-color: rgba(255, 102, 102,0.5);
@@ -71,9 +72,22 @@ if (!empty($_POST["btnRegistrar"])) {
         border: 1px solid black;
         border-radius: 0.2em;
     }
+    .user-box{        
+	    width: 40%;
+        margin: auto;
+    }
+    #TyC{
+        display: flex;
+        justify-content: center;
+    }
+    #registro{
+        display: flex;
+        flex-wrap: wrap;
+	    justify-content: center;        
+    }
 </style>
 <body>
-<div class="login-box">        
+<div class="login-box" id="form_registro">        
     <h1>Sanisima</h1>
 	<h2>Registro de Usuario</h2>
     <?php
@@ -83,7 +97,7 @@ if (!empty($_POST["btnRegistrar"])) {
             echo "</div>";
         }
     ?>
-	<form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
+	<form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" id="registro">
         <div class="user-box">
             <input  type="text" name="txtNombre"  required title="Ingresa tu correo"></input>
 			<label class="etiqueta">Nombre</label>
@@ -126,7 +140,7 @@ if (!empty($_POST["btnRegistrar"])) {
 		</div>
         <div id="TyC">
             <input  type="checkbox" name="ckTerminos" required ></input>
-            <label>He leido y acepto <a href="/Archivos/Términos y Condiciones de Uso.pdf" target="_blank" > términos y condiciones</a> </label> 
+            <label>He leido y acepto el  <a href="/Archivos/Aviso_de_privacidad_Sanisima.pdf" target="_blank" > aviso de privacidad</a> </label> 
 		</div>
 		<div class="envioDatos">
             <input type="submit" class="boton" value="Registrarse" name="btnRegistrar" >
